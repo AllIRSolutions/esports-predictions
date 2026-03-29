@@ -11,7 +11,6 @@ const path = require('path');
 const config = require('./config');
 const { getAllMatches, fetchTeamContext } = require('./scraper');
 const { predictMatch } = require('./predict');
-const { getMatchTrendData, getTrendLabel } = require('./trends');
 const { checkResults } = require('./learn');
 
 const DATA_DIR = path.join(__dirname, 'data');
@@ -66,18 +65,7 @@ async function buildPredictions() {
         console.log(`    Context fetch failed: ${e.message}`);
       }
       
-      // Fetch Google Trends data for public sentiment
-      let trendData = null;
-      try {
-        trendData = await getMatchTrendData(match.team1, match.team2, match.tournament, game);
-        if (trendData && trendData.sentimentNote) {
-          console.log(`    📊 Trend data: ${trendData.sentimentNote.substring(0, 80)}...`);
-        }
-      } catch (e) {
-        console.log(`    Trend check failed (non-fatal): ${e.message}`);
-      }
-      
-      const prediction = await predictMatch(match, teamContext, trendData);
+      const prediction = await predictMatch(match, teamContext);
       
       const confBar = prediction.confidence >= 75 ? '🔥' : prediction.confidence >= 60 ? '✅' : '⚠️';
       
@@ -85,14 +73,11 @@ async function buildPredictions() {
       if (match.tournament) lines.push(`🏆 ${match.tournament}`);
       lines.push(`🔮 ${prediction.winner} ${prediction.mapScore} ${confBar} ${prediction.confidence}%`);
       if (prediction.reasoning) lines.push(`💡 ${prediction.reasoning}`);
-      const trendLabel = getTrendLabel(trendData);
-      if (trendLabel) lines.push(`📊 ${trendLabel}`);
       lines.push('');
       
       allPredictions.push({
         ...match,
         prediction,
-        trendData: trendData ? { team1Interest: trendData.team1.interest, team2Interest: trendData.team2.interest, hypeAdvantage: trendData.hypeAdvantage } : null,
         timestamp: Date.now(),
       });
     }

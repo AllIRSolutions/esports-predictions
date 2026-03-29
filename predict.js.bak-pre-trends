@@ -4,8 +4,6 @@ const path = require('path');
 
 const client = new Anthropic.default();
 
-const { formatTrendContext } = require('./trends');
-
 const LEARNING_FILE = path.join(__dirname, 'data', 'learning.json');
 
 function loadLearningContext() {
@@ -30,7 +28,7 @@ function loadLearningContext() {
   }
 }
 
-async function predictMatch(match, teamContext, trendData = null) {
+async function predictMatch(match, teamContext) {
   const { game, team1, team2, tournament, bestOf, time } = match;
   const gameNames = { cs2: 'Counter-Strike 2', dota2: 'Dota 2', lol: 'League of Legends', valorant: 'Valorant' };
   const gameName = gameNames[game] || game;
@@ -49,7 +47,6 @@ ${teamContext.team1Info ? `${team1} INFO:\n${teamContext.team1Info}\n` : ''}
 ${teamContext.team2Info ? `${team2} INFO:\n${teamContext.team2Info}\n` : ''}
 ${teamContext.h2h ? `HEAD-TO-HEAD:\n${teamContext.h2h}\n` : ''}
 ${learningContext ? `\n${learningContext}\n` : ''}
-${trendData ? formatTrendContext(trendData) : ''}
 
 Consider: recent form, team roster strength, tournament context, map pool (CS2/Valorant), hero/champion pool (Dota 2/LoL), head-to-head history, online vs LAN, and any known roster changes.
 

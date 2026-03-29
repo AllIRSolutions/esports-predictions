@@ -1,0 +1,18 @@
+{
+  "name": "esports-predictions",
+  "version": "1.0.0",
+  "description": "AI-powered esports predictions bot using web scraping and Claude",
+  "main": "index.js",
+  "scripts": {
+    "today": "node index.js today",
+    "send": "node index.js send",
+    "learn": "node index.js learn"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "dayjs": "^1.11.0"
+  }
+}

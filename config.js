@@ -24,7 +24,7 @@ module.exports = {
   },
   whatsapp: {
     target: '+27783678266',
-    sendCommand: 'sudo docker exec -e OPENCLAW_GATEWAY_TOKEN=e908160113308e6fefefda1c603a5014bfdbabc7d92230acdf11329a4674e773 openclaw-source-backup-openclaw-gateway-1 node /app/openclaw.mjs message send --channel whatsapp',
+    sendCommand: 'sudo docker exec -e OPENCLAW_GATEWAY_TOKEN=9e2c9171fc1b9990c0c5ec95a0d8ebe01397e891af3cd38c5b936216718a8c66 openclaw-source-backup-openclaw-gateway-1 node /app/openclaw.mjs message send --channel whatsapp',
   },
   // Tier filters - only predict notable matches
   minTier: 2, // 1 = S-tier, 2 = A-tier, 3 = B-tier

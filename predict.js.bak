@@ -1,7 +1,8 @@
-const { callAI } = require('/home/kabelo/shared-ai-client');
+const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
 
+const client = new Anthropic.default();
 
 const { formatTrendContext } = require('./trends');
 
@@ -67,9 +68,14 @@ Respond in EXACTLY this JSON format (no markdown, no explanation):
 - reasoning: one concise line explaining the pick`;
 
   try {
-    const text = await callAI('You are an esports match predictor. Respond ONLY with valid JSON.', prompt, { maxTokens: 200 });
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    return JSON.parse(jsonMatch ? jsonMatch[0] : text);
+    const msg = await client.messages.create({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 200,
+      messages: [{ role: 'user', content: prompt }],
+    });
+
+    const text = msg.content[0].text.trim();
+    return JSON.parse(text);
   } catch (e) {
     console.error(`    Prediction error: ${e.message}`);
     return { winner: team1, mapScore: '2-1', confidence: 52, reasoning: 'Insufficient data - slight edge given' };

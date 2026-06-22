@@ -67,7 +67,7 @@ Respond in EXACTLY this JSON format (no markdown, no explanation):
 - reasoning: one concise line explaining the pick`;
 
   try {
-    const text = await callAI('You are an esports match predictor. Respond ONLY with valid JSON.', prompt, { maxTokens: 200 });
+    const text = await callAI('You are an esports match predictor. Respond ONLY with valid JSON.', prompt, { tier: 'predictions', maxTokens: 200 });
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     return JSON.parse(jsonMatch ? jsonMatch[0] : text);
   } catch (e) {

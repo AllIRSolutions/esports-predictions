@@ -1,0 +1,236 @@
+{
+  "communities": {
+    "0": [
+      "concept_whatsapp",
+      "config",
+      "index",
+      "index_buildpredictions",
+      "index_checkresults",
+      "index_config",
+      "index_data_dir",
+      "index_dayjs",
+      "index_displaydate",
+      "index_execsync",
+      "index_fs",
+      "index_gameemojis",
+      "index_gamenames",
+      "index_getallmatches_fetchteamcontext",
+      "index_getmatchtrenddata_gettrendlabel",
+      "index_main",
+      "index_path",
+      "index_predictions_dir",
+      "index_predictmatch",
+      "index_timezone",
+      "index_utc",
+      "readme",
+      "trends_gettrendlabel"
+    ],
+    "1": [
+      "concept_selflearning",
+      "learn",
+      "learn_analyzeaccuracy",
+      "learn_axios",
+      "learn_checkresults",
+      "learn_data_dir",
+      "learn_dayjs",
+      "learn_fetchlolresults",
+      "learn_fetchpandascoreresults",
+      "learn_fetchvlrresults",
+      "learn_fs",
+      "learn_generatelessons",
+      "learn_generatemockresults",
+      "learn_learning_file",
+      "learn_loadlearning",
+      "learn_normalizeteamname",
+      "learn_path",
+      "learn_predictions_dir",
+      "learn_savelearning",
+      "learn_sleep",
+      "learn_teamsmatch"
+    ],
+    "2": [
+      "concept_hltv",
+      "concept_liquipedia",
+      "concept_pandascore",
+      "scraper",
+      "scraper_axios",
+      "scraper_cache",
+      "scraper_cache_dir",
+      "scraper_cheerio",
+      "scraper_data_dir",
+      "scraper_dayjs",
+      "scraper_fetchliquipedia",
+      "scraper_fetchpandascore",
+      "scraper_fetchteamcontext",
+      "scraper_fs",
+      "scraper_getallmatches",
+      "scraper_path",
+      "scraper_sleep",
+      "scraper_timezone",
+      "scraper_utc"
+    ],
+    "3": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_anthropic_ai_sdk",
+      "package_dependencies_axios",
+      "package_dependencies_cheerio",
+      "package_dependencies_dayjs",
+      "package_dependencies_dotenv",
+      "package_dependencies_google_trends_api",
+      "package_description",
+      "package_main",
+      "package_name",
+      "package_scripts",
+      "package_scripts_learn",
+      "package_scripts_send",
+      "package_scripts_today",
+      "package_version"
+    ],
+    "4": [
+      "concept_claude_ai",
+      "predict",
+      "predict_callai",
+      "predict_formattrendcontext",
+      "predict_fs",
+      "predict_learning_file",
+      "predict_loadlearningcontext",
+      "predict_path",
+      "predict_predictmatch",
+      "trends_formattrendcontext"
+    ],
+    "5": [
+      "trends",
+      "trends_cache_dir",
+      "trends_ensuredir",
+      "trends_fs",
+      "trends_getmatchtrenddata",
+      "trends_googletrends",
+      "trends_loadcache",
+      "trends_log",
+      "trends_path",
+      "trends_savecache"
+    ]
+  },
+  "cohesion": {
+    "0": 0.10276679841897234,
+    "1": 0.1523809523809524,
+    "2": 0.13450292397660818,
+    "3": 0.125,
+    "4": 0.24444444444444444,
+    "5": 0.28888888888888886
+  },
+  "gods": [
+    {
+      "id": "learn_checkresults",
+      "label": "checkResults()",
+      "degree": 12
+    },
+    {
+      "id": "index_buildpredictions",
+      "label": "buildPredictions()",
+      "degree": 7
+    },
+    {
+      "id": "scraper_getallmatches",
+      "label": "getAllMatches()",
+      "degree": 6
+    },
+    {
+      "id": "trends_getmatchtrenddata",
+      "label": "getMatchTrendData()",
+      "degree": 6
+    },
+    {
+      "id": "predict_predictmatch",
+      "label": "predictMatch()",
+      "degree": 5
+    },
+    {
+      "id": "readme",
+      "label": "README - Esports Predictions",
+      "degree": 5
+    },
+    {
+      "id": "index_main",
+      "label": "main()",
+      "degree": 4
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 4
+    },
+    {
+      "id": "scraper_fetchteamcontext",
+      "label": "fetchTeamContext()",
+      "degree": 4
+    },
+    {
+      "id": "learn_normalizeteamname",
+      "label": "normalizeTeamName()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "buildPredictions()",
+      "target": "predictMatch()",
+      "source_files": [
+        "index.js",
+        "predict.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "buildPredictions()",
+      "target": "fetchTeamContext()",
+      "source_files": [
+        "index.js",
+        "scraper.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "buildPredictions()",
+      "target": "getAllMatches()",
+      "source_files": [
+        "index.js",
+        "scraper.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "buildPredictions()",
+      "target": "getMatchTrendData()",
+      "source_files": [
+        "index.js",
+        "trends.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "checkResults()",
+      "source_files": [
+        "index.js",
+        "learn.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 1425,
+    "output": 1634
+  }
+}

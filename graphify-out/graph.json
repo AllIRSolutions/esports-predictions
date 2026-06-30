@@ -1,0 +1,2538 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "prediction_pipeline",
+        "label": "End-to-End Prediction Pipeline",
+        "nodes": [
+          "scraper",
+          "predict",
+          "learn",
+          "index",
+          "concept_whatsapp"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "README.md"
+      },
+      {
+        "id": "data_sources",
+        "label": "Data Sources for Match Scraping",
+        "nodes": [
+          "concept_hltv",
+          "concept_liquipedia",
+          "concept_pandascore",
+          "scraper"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "config.js",
+      "file_type": "code",
+      "source_file": "config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "config",
+      "community": 0,
+      "norm_label": "config.js"
+    },
+    {
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "index",
+      "community": 0,
+      "norm_label": "index.js"
+    },
+    {
+      "label": "dayjs",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "index_dayjs",
+      "community": 0,
+      "norm_label": "dayjs"
+    },
+    {
+      "label": "utc",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "index_utc",
+      "community": 0,
+      "norm_label": "utc"
+    },
+    {
+      "label": "timezone",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "index_timezone",
+      "community": 0,
+      "norm_label": "timezone"
+    },
+    {
+      "label": "{ execSync }",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "index_execsync",
+      "community": 0,
+      "norm_label": "{ execsync }"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "index_fs",
+      "community": 0,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "index_path",
+      "community": 0,
+      "norm_label": "path"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "index_config",
+      "community": 0,
+      "norm_label": "config"
+    },
+    {
+      "label": "{ getAllMatches, fetchTeamContext }",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "index_getallmatches_fetchteamcontext",
+      "community": 0,
+      "norm_label": "{ getallmatches, fetchteamcontext }"
+    },
+    {
+      "label": "{ predictMatch }",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "index_predictmatch",
+      "community": 0,
+      "norm_label": "{ predictmatch }"
+    },
+    {
+      "label": "{ getMatchTrendData, getTrendLabel }",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "index_getmatchtrenddata_gettrendlabel",
+      "community": 0,
+      "norm_label": "{ getmatchtrenddata, gettrendlabel }"
+    },
+    {
+      "label": "{ checkResults }",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "index_checkresults",
+      "community": 0,
+      "norm_label": "{ checkresults }"
+    },
+    {
+      "label": "DATA_DIR",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "index_data_dir",
+      "community": 0,
+      "norm_label": "data_dir"
+    },
+    {
+      "label": "PREDICTIONS_DIR",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "index_predictions_dir",
+      "community": 0,
+      "norm_label": "predictions_dir"
+    },
+    {
+      "label": "displayDate",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "index_displaydate",
+      "community": 0,
+      "norm_label": "displaydate"
+    },
+    {
+      "label": "gameEmojis",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "index_gameemojis",
+      "community": 0,
+      "norm_label": "gameemojis"
+    },
+    {
+      "label": "gameNames",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "index_gamenames",
+      "community": 0,
+      "norm_label": "gamenames"
+    },
+    {
+      "label": "buildPredictions()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "index_buildpredictions",
+      "community": 0,
+      "norm_label": "buildpredictions()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "index.js",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "index_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "learn.js",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "learn",
+      "community": 1,
+      "norm_label": "learn.js"
+    },
+    {
+      "label": "axios",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "learn_axios",
+      "community": 1,
+      "norm_label": "axios"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "learn_fs",
+      "community": 1,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "learn_path",
+      "community": 1,
+      "norm_label": "path"
+    },
+    {
+      "label": "dayjs",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "learn_dayjs",
+      "community": 1,
+      "norm_label": "dayjs"
+    },
+    {
+      "label": "DATA_DIR",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "learn_data_dir",
+      "community": 1,
+      "norm_label": "data_dir"
+    },
+    {
+      "label": "PREDICTIONS_DIR",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "learn_predictions_dir",
+      "community": 1,
+      "norm_label": "predictions_dir"
+    },
+    {
+      "label": "LEARNING_FILE",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "learn_learning_file",
+      "community": 1,
+      "norm_label": "learning_file"
+    },
+    {
+      "label": "sleep()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "learn_sleep",
+      "community": 1,
+      "norm_label": "sleep()"
+    },
+    {
+      "label": "loadLearning()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "learn_loadlearning",
+      "community": 1,
+      "norm_label": "loadlearning()"
+    },
+    {
+      "label": "saveLearning()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "learn_savelearning",
+      "community": 1,
+      "norm_label": "savelearning()"
+    },
+    {
+      "label": "normalizeTeamName()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "learn_normalizeteamname",
+      "community": 1,
+      "norm_label": "normalizeteamname()"
+    },
+    {
+      "label": "teamsMatch()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "learn_teamsmatch",
+      "community": 1,
+      "norm_label": "teamsmatch()"
+    },
+    {
+      "label": "fetchPandascoreResults()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "learn_fetchpandascoreresults",
+      "community": 1,
+      "norm_label": "fetchpandascoreresults()"
+    },
+    {
+      "label": "fetchVlrResults()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "learn_fetchvlrresults",
+      "community": 1,
+      "norm_label": "fetchvlrresults()"
+    },
+    {
+      "label": "fetchLoLResults()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "learn_fetchlolresults",
+      "community": 1,
+      "norm_label": "fetchlolresults()"
+    },
+    {
+      "label": "generateMockResults()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "learn_generatemockresults",
+      "community": 1,
+      "norm_label": "generatemockresults()"
+    },
+    {
+      "label": "analyzeAccuracy()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L180",
+      "_origin": "ast",
+      "id": "learn_analyzeaccuracy",
+      "community": 1,
+      "norm_label": "analyzeaccuracy()"
+    },
+    {
+      "label": "generateLessons()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L222",
+      "_origin": "ast",
+      "id": "learn_generatelessons",
+      "community": 1,
+      "norm_label": "generatelessons()"
+    },
+    {
+      "label": "checkResults()",
+      "file_type": "code",
+      "source_file": "learn.js",
+      "source_location": "L266",
+      "_origin": "ast",
+      "id": "learn_checkresults",
+      "community": 1,
+      "norm_label": "checkresults()"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 3,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 3,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 3,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_description",
+      "community": 3,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_main",
+      "community": 3,
+      "norm_label": "main"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 3,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "today",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "package_scripts_today",
+      "community": 3,
+      "norm_label": "today"
+    },
+    {
+      "label": "send",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "package_scripts_send",
+      "community": 3,
+      "norm_label": "send"
+    },
+    {
+      "label": "learn",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "package_scripts_learn",
+      "community": 3,
+      "norm_label": "learn"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_dependencies",
+      "community": 3,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@anthropic-ai/sdk",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_dependencies_anthropic_ai_sdk",
+      "community": 3,
+      "norm_label": "@anthropic-ai/sdk"
+    },
+    {
+      "label": "axios",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "package_dependencies_axios",
+      "community": 3,
+      "norm_label": "axios"
+    },
+    {
+      "label": "cheerio",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "package_dependencies_cheerio",
+      "community": 3,
+      "norm_label": "cheerio"
+    },
+    {
+      "label": "dayjs",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "package_dependencies_dayjs",
+      "community": 3,
+      "norm_label": "dayjs"
+    },
+    {
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "package_dependencies_dotenv",
+      "community": 3,
+      "norm_label": "dotenv"
+    },
+    {
+      "label": "google-trends-api",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "package_dependencies_google_trends_api",
+      "community": 3,
+      "norm_label": "google-trends-api"
+    },
+    {
+      "label": "predict.js",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "predict",
+      "community": 4,
+      "norm_label": "predict.js"
+    },
+    {
+      "label": "{ callAI }",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "predict_callai",
+      "community": 4,
+      "norm_label": "{ callai }"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "predict_fs",
+      "community": 4,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "predict_path",
+      "community": 4,
+      "norm_label": "path"
+    },
+    {
+      "label": "{ formatTrendContext }",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "predict_formattrendcontext",
+      "community": 4,
+      "norm_label": "{ formattrendcontext }"
+    },
+    {
+      "label": "LEARNING_FILE",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "predict_learning_file",
+      "community": 4,
+      "norm_label": "learning_file"
+    },
+    {
+      "label": "loadLearningContext()",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "predict_loadlearningcontext",
+      "community": 4,
+      "norm_label": "loadlearningcontext()"
+    },
+    {
+      "label": "predictMatch()",
+      "file_type": "code",
+      "source_file": "predict.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "predict_predictmatch",
+      "community": 4,
+      "norm_label": "predictmatch()"
+    },
+    {
+      "label": "scraper.js",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scraper",
+      "community": 2,
+      "norm_label": "scraper.js"
+    },
+    {
+      "label": "axios",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scraper_axios",
+      "community": 2,
+      "norm_label": "axios"
+    },
+    {
+      "label": "cheerio",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "scraper_cheerio",
+      "community": 2,
+      "norm_label": "cheerio"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "scraper_fs",
+      "community": 2,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "scraper_path",
+      "community": 2,
+      "norm_label": "path"
+    },
+    {
+      "label": "dayjs",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "scraper_dayjs",
+      "community": 2,
+      "norm_label": "dayjs"
+    },
+    {
+      "label": "utc",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "scraper_utc",
+      "community": 2,
+      "norm_label": "utc"
+    },
+    {
+      "label": "timezone",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "scraper_timezone",
+      "community": 2,
+      "norm_label": "timezone"
+    },
+    {
+      "label": "DATA_DIR",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "scraper_data_dir",
+      "community": 2,
+      "norm_label": "data_dir"
+    },
+    {
+      "label": "CACHE_DIR",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "scraper_cache_dir",
+      "community": 2,
+      "norm_label": "cache_dir"
+    },
+    {
+      "label": "cache()",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "scraper_cache",
+      "community": 2,
+      "norm_label": "cache()"
+    },
+    {
+      "label": "sleep()",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "scraper_sleep",
+      "community": 2,
+      "norm_label": "sleep()"
+    },
+    {
+      "label": "fetchPandaScore()",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "scraper_fetchpandascore",
+      "community": 2,
+      "norm_label": "fetchpandascore()"
+    },
+    {
+      "label": "fetchLiquipedia()",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "scraper_fetchliquipedia",
+      "community": 2,
+      "norm_label": "fetchliquipedia()"
+    },
+    {
+      "label": "fetchTeamContext()",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "scraper_fetchteamcontext",
+      "community": 2,
+      "norm_label": "fetchteamcontext()"
+    },
+    {
+      "label": "getAllMatches()",
+      "file_type": "code",
+      "source_file": "scraper.js",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "scraper_getallmatches",
+      "community": 2,
+      "norm_label": "getallmatches()"
+    },
+    {
+      "label": "trends.js",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "trends",
+      "community": 5,
+      "norm_label": "trends.js"
+    },
+    {
+      "label": "googleTrends",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "trends_googletrends",
+      "community": 5,
+      "norm_label": "googletrends"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "trends_fs",
+      "community": 5,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "trends_path",
+      "community": 5,
+      "norm_label": "path"
+    },
+    {
+      "label": "CACHE_DIR",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "trends_cache_dir",
+      "community": 5,
+      "norm_label": "cache_dir"
+    },
+    {
+      "label": "log()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "trends_log",
+      "community": 5,
+      "norm_label": "log()"
+    },
+    {
+      "label": "ensureDir()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "trends_ensuredir",
+      "community": 5,
+      "norm_label": "ensuredir()"
+    },
+    {
+      "label": "loadCache()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "trends_loadcache",
+      "community": 5,
+      "norm_label": "loadcache()"
+    },
+    {
+      "label": "saveCache()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "trends_savecache",
+      "community": 5,
+      "norm_label": "savecache()"
+    },
+    {
+      "label": "getMatchTrendData()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "trends_getmatchtrenddata",
+      "community": 5,
+      "norm_label": "getmatchtrenddata()"
+    },
+    {
+      "label": "formatTrendContext()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "trends_formattrendcontext",
+      "community": 4,
+      "norm_label": "formattrendcontext()"
+    },
+    {
+      "label": "getTrendLabel()",
+      "file_type": "code",
+      "source_file": "trends.js",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "trends_gettrendlabel",
+      "community": 0,
+      "norm_label": "gettrendlabel()"
+    },
+    {
+      "label": "README - Esports Predictions",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme",
+      "community": 0,
+      "norm_label": "readme - esports predictions"
+    },
+    {
+      "label": "HLTV.org Data Source (CS2)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_hltv",
+      "community": 2,
+      "norm_label": "hltv.org data source (cs2)"
+    },
+    {
+      "label": "Liquipedia Data Source (Dota2/LoL/Valorant)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_liquipedia",
+      "community": 2,
+      "norm_label": "liquipedia data source (dota2/lol/valorant)"
+    },
+    {
+      "label": "PandaScore API Fallback",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_pandascore",
+      "community": 2,
+      "norm_label": "pandascore api fallback"
+    },
+    {
+      "label": "Claude AI (Anthropic)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_claude_ai",
+      "community": 4,
+      "norm_label": "claude ai (anthropic)"
+    },
+    {
+      "label": "WhatsApp Delivery",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_whatsapp",
+      "community": 0,
+      "norm_label": "whatsapp delivery"
+    },
+    {
+      "label": "Self-Learning / Accuracy Tracking",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_selflearning",
+      "community": 1,
+      "norm_label": "self-learning / accuracy tracking"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.8,
+      "confidence_score": 0.9,
+      "source": "index",
+      "target": "config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.9,
+      "source": "readme",
+      "target": "config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.9,
+      "source": "index",
+      "target": "concept_whatsapp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_buildpredictions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_checkresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_data_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_dayjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_displaydate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_execsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_gameemojis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_gamenames",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getallmatches_fetchteamcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_getmatchtrenddata_gettrendlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_predictions_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_predictmatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_timezone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "index",
+      "target": "index_utc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 0.95,
+      "source": "index",
+      "target": "learn"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "index",
+      "target": "learn_checkresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 0.95,
+      "source": "index",
+      "target": "predict"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "index",
+      "target": "predict_predictmatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "confidence_score": 0.95,
+      "source": "index",
+      "target": "scraper"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "index",
+      "target": "scraper_fetchteamcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "index",
+      "target": "scraper_getallmatches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "index",
+      "target": "trends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "index",
+      "target": "trends_getmatchtrenddata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "index",
+      "target": "trends_gettrendlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme",
+      "target": "index"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "index_main",
+      "target": "index_dayjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "index_buildpredictions",
+      "target": "predict_predictmatch"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "index_buildpredictions",
+      "target": "scraper_fetchteamcontext"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "index_buildpredictions",
+      "target": "scraper_getallmatches"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "index_buildpredictions",
+      "target": "trends_getmatchtrenddata"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "index_buildpredictions",
+      "target": "trends_gettrendlabel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "index_main",
+      "target": "index_buildpredictions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.js",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "index_main",
+      "target": "learn_checkresults"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "learn",
+      "target": "concept_selflearning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_analyzeaccuracy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_axios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_checkresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_data_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_dayjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_fetchlolresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_fetchpandascoreresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_fetchvlrresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_generatelessons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_generatemockresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_learning_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_loadlearning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_normalizeteamname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_predictions_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_savelearning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "learn",
+      "target": "learn_teamsmatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.8,
+      "source": "learn",
+      "target": "predict"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme",
+      "target": "learn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "learn_fetchpandascoreresults",
+      "target": "learn_dayjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L296",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L323",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_loadlearning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L377",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_savelearning",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "learn_analyzeaccuracy",
+      "target": "learn_normalizeteamname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "learn_teamsmatch",
+      "target": "learn_normalizeteamname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_fetchpandascoreresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L301",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_fetchvlrresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L306",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_fetchlolresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_generatemockresults",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L326",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_analyzeaccuracy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "learn.js",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "learn_checkresults",
+      "target": "learn_generatelessons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_learn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_send",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_today",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_anthropic_ai_sdk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_axios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_cheerio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_dayjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_dotenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_google_trends_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "predict",
+      "target": "concept_claude_ai"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_callai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_formattrendcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_learning_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_loadlearningcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "predict_predictmatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "trends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "predict",
+      "target": "trends_formattrendcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme",
+      "target": "predict"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "predict.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "predict_predictmatch",
+      "target": "predict_loadlearningcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "predict.js",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "predict_predictmatch",
+      "target": "trends_formattrendcontext"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme",
+      "target": "scraper"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "concept_hltv"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "concept_liquipedia"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.9,
+      "source": "scraper",
+      "target": "concept_pandascore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_axios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_cache_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_cheerio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_data_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_dayjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_fetchliquipedia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_fetchpandascore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_fetchteamcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_getallmatches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_timezone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "scraper",
+      "target": "scraper_utc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "scraper_fetchliquipedia",
+      "target": "scraper_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "scraper_fetchteamcontext",
+      "target": "scraper_cache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "scraper_getallmatches",
+      "target": "scraper_sleep",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "scraper_getallmatches",
+      "target": "scraper_fetchpandascore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scraper.js",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "scraper_getallmatches",
+      "target": "scraper_fetchliquipedia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_cache_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_ensuredir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_formattrendcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_fs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_getmatchtrenddata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_gettrendlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_googletrends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_loadcache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "trends",
+      "target": "trends_savecache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "trends_getmatchtrenddata",
+      "target": "trends_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "trends_savecache",
+      "target": "trends_ensuredir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "trends_getmatchtrenddata",
+      "target": "trends_loadcache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "trends.js",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "trends_getmatchtrenddata",
+      "target": "trends_savecache",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "prediction_pipeline",
+      "label": "End-to-End Prediction Pipeline",
+      "nodes": [
+        "scraper",
+        "predict",
+        "learn",
+        "index",
+        "concept_whatsapp"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md"
+    },
+    {
+      "id": "data_sources",
+      "label": "Data Sources for Match Scraping",
+      "nodes": [
+        "concept_hltv",
+        "concept_liquipedia",
+        "concept_pandascore",
+        "scraper"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "881523c7558e39251c4de9783021366d34e089db"
+}

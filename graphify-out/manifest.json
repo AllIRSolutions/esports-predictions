@@ -1,0 +1,37 @@
+{
+  "config.js": {
+    "mtime": 1779445992.2261658,
+    "ast_hash": "2157ea75a74efe724a92c035e5d72cec",
+    "semantic_hash": "2157ea75a74efe724a92c035e5d72cec"
+  },
+  "index.js": {
+    "mtime": 1776775291.4128802,
+    "ast_hash": "7efb7460fd514119e886a9395a092744",
+    "semantic_hash": "7efb7460fd514119e886a9395a092744"
+  },
+  "learn.js": {
+    "mtime": 1776775291.4128802,
+    "ast_hash": "77995aa70936c0c7bd96e5b368d07520",
+    "semantic_hash": "77995aa70936c0c7bd96e5b368d07520"
+  },
+  "package.json": {
+    "mtime": 1774796838.9522824,
+    "ast_hash": "dca64f9b5ceaeca72c7eb2d51cdaf745",
+    "semantic_hash": "dca64f9b5ceaeca72c7eb2d51cdaf745"
+  },
+  "predict.js": {
+    "mtime": 1782117355.7492127,
+    "ast_hash": "d9398d7baf8cb0da119ac4e151ab5d60",
+    "semantic_hash": "d9398d7baf8cb0da119ac4e151ab5d60"
+  },
+  "scraper.js": {
+    "mtime": 1776775291.4128802,
+    "ast_hash": "f920c949fa77b83dc02cdfef037a263b",
+    "semantic_hash": "f920c949fa77b83dc02cdfef037a263b"
+  },
+  "trends.js": {
+    "mtime": 1776775291.4168801,
+    "ast_hash": "4ddae2b7bcde0336620ffaa78bb73316",
+    "semantic_hash": "4ddae2b7bcde0336620ffaa78bb73316"
+  }
+}

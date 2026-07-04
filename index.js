@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { callAI } = require('/home/kabelo/shared-ai-client');
 const dayjs = require('dayjs');
 const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
@@ -24,6 +25,27 @@ const displayDate = dayjs(today).format('ddd DD MMM YYYY');
 
 const gameEmojis = { cs2: '🔫', dota2: '⚔️', lol: '🏰', valorant: '🎯' };
 const gameNames = { cs2: 'CS2', dota2: 'DOTA 2', lol: 'LEAGUE OF LEGENDS', valorant: 'VALORANT' };
+
+
+async function aiValidateEsports(message) {
+  if (!message) return message;
+  try {
+    const aiResponse = await callAI(
+      'You are an esports analyst covering CS2, Dota 2, LoL, and Valorant. Be concise.',
+      `Review these esports predictions. Add a brief AI take (2-3 sentences) about the strongest picks and any upsets to watch:\n\n${message}`,
+      { tier: 'analysis', maxTokens: 500, timeout: 120000 }
+    );
+    if (aiResponse) {
+      const summary = aiResponse.trim();
+      if (summary.length > 20 && summary.length < 500) {
+        return message + '\n\n🤖 AI Take: ' + summary.split('\n').slice(0, 2).join(' ');
+      }
+    }
+  } catch (e) {
+    console.log('[AI] Esports validation skipped:', e.message);
+  }
+  return message;
+}
 
 async function buildPredictions() {
   const matches = await getAllMatches(today);
